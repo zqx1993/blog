@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="目标," />
+  <meta name="keywords" content="mysql," />
 
 
 
@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;今天是我第一次写博客，不知道该写点什么，总觉得心里有千言万语想要表达，可是真正想要去书写的时候，却发现是多么的词穷。一直以来我都有几个目标:  学好编程 学好英语 赚钱!!!  &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;这三个都是需要长久积累，非常漫长的过程，我没有一个好的自制能力，所以我想把我学习和生活的点点滴滴有个小小的记录，一是鞭策自己">
-<meta name="keywords" content="目标">
+<meta name="description" content="常用索引场景 主键索引 和唯一索引相同的是索引列的值唯一，但是索引列的值不可以为null。   普通索引 给某个列添加索引，这个就不需要多说了。   唯一索引 顾名思义，索引列的值唯一，但索引列的值可以为null。   联合索引  使用多个列联合创建索引，根据mysql“最左前缀原则“， 按照经常使用的查询条件顺序建立索引，例如一个表“user”中: id，name，age三个列建立联合索引  1">
+<meta name="keywords" content="mysql">
 <meta property="og:type" content="article">
-<meta property="og:title" content="第一次尝试写博客">
-<meta property="og:url" content="http://yoursite.com/2018/08/12/第一次尝试写博客/index.html">
+<meta property="og:title" content="记录mysql关于索引和sql优化的学习">
+<meta property="og:url" content="http://yoursite.com/2018/08/24/记录mysql关于索引和sql优化的学习/index.html">
 <meta property="og:site_name" content="zqx的个人小站">
-<meta property="og:description" content="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;今天是我第一次写博客，不知道该写点什么，总觉得心里有千言万语想要表达，可是真正想要去书写的时候，却发现是多么的词穷。一直以来我都有几个目标:  学好编程 学好英语 赚钱!!!  &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;这三个都是需要长久积累，非常漫长的过程，我没有一个好的自制能力，所以我想把我学习和生活的点点滴滴有个小小的记录，一是鞭策自己">
+<meta property="og:description" content="常用索引场景 主键索引 和唯一索引相同的是索引列的值唯一，但是索引列的值不可以为null。   普通索引 给某个列添加索引，这个就不需要多说了。   唯一索引 顾名思义，索引列的值唯一，但索引列的值可以为null。   联合索引  使用多个列联合创建索引，根据mysql“最左前缀原则“， 按照经常使用的查询条件顺序建立索引，例如一个表“user”中: id，name，age三个列建立联合索引  1">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-08-12T08:38:16.584Z">
+<meta property="og:updated_time" content="2018-08-24T15:18:43.940Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="第一次尝试写博客">
-<meta name="twitter:description" content="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;今天是我第一次写博客，不知道该写点什么，总觉得心里有千言万语想要表达，可是真正想要去书写的时候，却发现是多么的词穷。一直以来我都有几个目标:  学好编程 学好英语 赚钱!!!  &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;这三个都是需要长久积累，非常漫长的过程，我没有一个好的自制能力，所以我想把我学习和生活的点点滴滴有个小小的记录，一是鞭策自己">
+<meta name="twitter:title" content="记录mysql关于索引和sql优化的学习">
+<meta name="twitter:description" content="常用索引场景 主键索引 和唯一索引相同的是索引列的值唯一，但是索引列的值不可以为null。   普通索引 给某个列添加索引，这个就不需要多说了。   唯一索引 顾名思义，索引列的值唯一，但索引列的值可以为null。   联合索引  使用多个列联合创建索引，根据mysql“最左前缀原则“， 按照经常使用的查询条件顺序建立索引，例如一个表“user”中: id，name，age三个列建立联合索引  1">
 
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/08/12/第一次尝试写博客/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/08/24/记录mysql关于索引和sql优化的学习/"/>
 
 
 
 
 
-  <title>第一次尝试写博客 | zqx的个人小站</title>
+  <title>记录mysql关于索引和sql优化的学习 | zqx的个人小站</title>
   
 
 
@@ -263,7 +263,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/08/12/第一次尝试写博客/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/08/24/记录mysql关于索引和sql优化的学习/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="zqx">
@@ -280,7 +280,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">第一次尝试写博客</h1>
+          <h1 class="post-title" itemprop="name headline">记录mysql关于索引和sql优化的学习</h1>
         
 
         <div class="post-meta">
@@ -292,8 +292,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-08-12T15:14:37+08:00">
-                2018-08-12
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-08-24T22:13:55+08:00">
+                2018-08-24
               </time>
             
 
@@ -315,8 +315,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/计划/" itemprop="url" rel="index">
-                    <span itemprop="name">计划</span>
+                  <a href="/categories/mysql/" itemprop="url" rel="index">
+                    <span itemprop="name">mysql</span>
                   </a>
                 </span>
 
@@ -352,13 +352,54 @@
       
 
       
-        <p>&nbsp;&nbsp;&nbsp;&nbsp;今天是我第一次写博客，不知道该写点什么，总觉得心里有千言万语想要表达，可是真正想要去书写的时候，却发现是多么的词穷。一直以来我都有几个目标:</p>
-<ol>
-<li>学好编程</li>
-<li>学好英语</li>
-<li>赚钱!!!</li>
-</ol>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;这三个都是需要长久积累，非常漫长的过程，我没有一个好的自制能力，所以我想把我学习和生活的点点滴滴有个小小的记录，一是鞭策自己坚持学习，二是做个备忘，嗯，就是这样! :D</p>
+        <h2 id="常用索引场景"><a href="#常用索引场景" class="headerlink" title="常用索引场景"></a>常用索引场景</h2><ul>
+<li>主键索引<blockquote>
+<p>和唯一索引相同的是索引列的值唯一，但是索引列的值不可以为null。</p>
+</blockquote>
+</li>
+<li>普通索引<blockquote>
+<p>给某个列添加索引，这个就不需要多说了。</p>
+</blockquote>
+</li>
+<li>唯一索引<blockquote>
+<p>顾名思义，索引列的值唯一，但索引列的值可以为null。</p>
+</blockquote>
+</li>
+<li><p>联合索引</p>
+<blockquote>
+<p>使用多个列联合创建索引，根据mysql“最左前缀原则“， 按照经常使用的查询条件顺序建立索引，例如一个表“user”中: id，name，age三个列建立联合索引</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"># 可以应用索引</span><br><span class="line">select xxx from user where id = xxx</span><br><span class="line"># 可以应用索引</span><br><span class="line">select xxx from user where id = xxx and name = xxx</span><br><span class="line"># 可以应用索引</span><br><span class="line">select xxx from user where id = xxx and name = xxx and age = xxx</span><br><span class="line"># 不能应用索引</span><br><span class="line">select xxx from user where name = xxx and id = xxx</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<ul>
+<li><p>前缀索引</p>
+<blockquote>
+<p>给某个列添加前缀索引，例如想要对某个列前几个字符进行匹配，可以给这个列的前几个字符添加索引，例如: 某个列的数据是 “gy111”, “gy222”, “gy333”, “xy111”, “xy222”, “xxxxx”。<br>我们可以给这个列的前两个字符添加索引</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select &apos;columeName&apos; from &lt;table&gt; where name like &apos;gy%&apos;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>覆盖索引</p>
+<blockquote>
+<p>这里找到一个解释:  覆盖索引是非聚集组合索引的一种形式，它包括在查询里的Select、Join和Where子句用到的所有列（即建立索引的字段正好是覆盖查询语句[select子句]与查询条件[Where子句]中所涉及的字段，也即，索引包含了查询正在查找的所有数据）。例如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># name 为索引列</span><br><span class="line">select name from &lt;table&gt; where name = ?</span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+</ul>
+<h2 id="关于一些简单的sql优化"><a href="#关于一些简单的sql优化" class="headerlink" title="关于一些简单的sql优化"></a>关于一些简单的sql优化</h2><ul>
+<li><p>避免使用select * 查询</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># 在查询语句中要尽量避免使用 select * 查询，明确指定要查询的列</span><br><span class="line">select xxx, yyy, zzz from &lt;table&gt; where xxx = ?</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>count(*), count(1), count(col)</p>
+<blockquote>
+<p>count(*) 和 count(1) 基本是一样的，会自动选择not null列，字段较窄的列进行统计；而count(col) 是不会对col值为null的行进行统计，统计所有记录时结果会出现错误，如果col没有索引或不是最优索引，效率也会降低。</p>
+</blockquote>
+</li>
+<li>类型自动转换的问题<blockquote>
+<p>例如:一个表”user”中有”name“列为索引列</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># 如果有一个语句如下，因为这里条件没有加引号，就会触发类型自动转换，引发全表查询，效率会很低！</span><br><span class="line">select &apos;columeName&apos; from user where name = xxx</span><br><span class="line"># 而加了引号就会触发索引，效率很高</span><br><span class="line">select &apos;columeName&apos; from user where name = &apos;xxx&apos;</span><br></pre></td></tr></table></figure></blockquote>
+</li>
+</ul>
 
       
     </div>
@@ -376,7 +417,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/目标/" rel="tag"># 目标</a>
+            <a href="/tags/mysql/" rel="tag"># mysql</a>
           
         </div>
       
@@ -389,15 +430,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2018/08/15/关于vue框架vue-router使用中的一点小总结/" rel="next" title="关于vue框架vue-router使用中的一点小总结">
+                <i class="fa fa-chevron-left"></i> 关于vue框架vue-router使用中的一点小总结
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/08/15/关于vue框架vue-router使用中的一点小总结/" rel="prev" title="关于vue框架vue-router使用中的一点小总结">
-                关于vue框架vue-router使用中的一点小总结 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -449,8 +490,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -514,6 +564,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#常用索引场景"><span class="nav-number">1.</span> <span class="nav-text">常用索引场景</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#关于一些简单的sql优化"><span class="nav-number">2.</span> <span class="nav-text">关于一些简单的sql优化</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
